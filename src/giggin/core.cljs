@@ -1,10 +1,18 @@
 (ns giggin.core
-  (:require [reagent.core :as r]))
+  (:require [reagent.core :as r]
+            [giggin.components.header :refer [header]]
+            [giggin.components.gigs :refer [gigs]]
+            ;[giggin.components.orders :refer [orders]]
+            [giggin.components.footer :refer [footer]]))
 
-;;In JS: const app = () => (<div class="container"></div>);
+
 (defn app
   []
-  [:div.container])
+  [:div.container
+   [header]
+   [gigs]
+   ;[orders]
+   [footer]])
 
 (defn ^:export main
   []
